@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1 (Python 3.9.6 on darwin)" generated="2024-10-05T17:49:34.201985" rpa="false" schemaversion="5">
+<suite id="s1" name="Demo Test" source="/Users/helgeadamo/PycharmProjects/pythonProject1/demo_test.robot">
+<test id="s1-t1" name="Search Test" line="16">
+<kw name="Create Chrome Driver" owner="chrome_driver_resource">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-10-05T17:49:34.264289" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>Chrome</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2024-10-05T17:49:34.264220" elapsed="0.622529"/>
+</kw>
+<msg time="2024-10-05T17:49:34.887021" level="INFO">${driver} = None</msg>
+<var>${driver}</var>
+<doc>Initializes the Chrome WebDriver.</doc>
+<status status="PASS" start="2024-10-05T17:49:34.263862" elapsed="0.623178"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-10-05T17:49:34.887425" level="INFO">Opening url 'https://www.dimehead.de/'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-10-05T17:49:34.887279" elapsed="1.024449"/>
+</kw>
+<kw name="Accept Cookies" owner="chrome_driver_resource">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=cc-cookie-accept</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-10-05T17:49:35.912336" elapsed="0.010741"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-10-05T17:49:35.923364" level="INFO">Clicking button 'id=cc-cookie-accept'.</msg>
+<arg>id=cc-cookie-accept</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-05T17:49:35.923224" elapsed="2.245459"/>
+</kw>
+<arg>${driver}</arg>
+<status status="PASS" start="2024-10-05T17:49:35.912007" elapsed="2.256760"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${ORDER_NOW_XPATH}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-10-05T17:49:38.168937" elapsed="0.007377"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-10-05T17:49:38.176613" level="INFO">Clicking element 'xpath=//*[@id="content"]/div/div[1]/div/div/div/div/div/div/div/div/div/a'.</msg>
+<arg>${ORDER_NOW_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-05T17:49:38.176471" elapsed="1.726152"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${ADD_TO_CART_XPATH}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-10-05T17:49:39.902997" elapsed="0.012057"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-10-05T17:49:39.915697" level="INFO">Clicking element 'xpath=//*[@id="atomion-summary-wrapper"]/div[2]/form/button'.</msg>
+<arg>${ADD_TO_CART_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-05T17:49:39.915379" elapsed="1.156266"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${VIEW_CART_XPATH}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-10-05T17:49:41.071893" elapsed="0.599011"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-10-05T17:49:41.671340" level="INFO">Clicking element 'xpath=//*[@id="primary"]/div[1]/div/a'.</msg>
+<arg>${VIEW_CART_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-05T17:49:41.671130" elapsed="3.208175"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${ADD_XPATH}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-10-05T17:49:44.879495" elapsed="0.007681"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-10-05T17:49:44.887528" level="INFO">Clicking element 'xpath=//*[@id="page-11"]/div/div/div[4]/div/div/div[2]/table/tbody/tr/td[2]/div/div[3]/div/button[2]'.</msg>
+<arg>${ADD_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-05T17:49:44.887365" elapsed="0.727070"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${PAYPAL_CHECKOUT_XPATH}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-10-05T17:49:45.614935" elapsed="0.011564"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-10-05T17:49:45.627063" level="INFO">Clicking element 'xpath=//*[@id="page-11"]/div/div/div[4]/div/div/div[3]/div[3]/div[2]/a'.</msg>
+<msg time="2024-10-05T17:49:46.854692" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-10-05T17:49:46.854850" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;a href="https://www.dimehead.de/checkout/" class="wc-block-components-button wp-element-button wc-block-cart__submit-button contained" style="pointer-events: none;" aria-disabled="true" tabindex="-1"&gt;...&lt;/a&gt; is not clickable at point (963, 810). Other element would receive the click: &lt;div class="wc-block-cart__submit-container"&gt;...&lt;/div&gt;
+  (Session info: chrome=129.0.6668.90)
+Stacktrace:
+0   chromedriver                        0x0000000102970248 cxxbridge1$str$ptr + 1907280
+1   chromedriver                        0x0000000102968730 cxxbridge1$str$ptr + 1875768
+2   chromedriver                        0x000000010257c260 cxxbridge1$string$len + 89488
+3   chromedriver                        0x00000001025c5cd4 cxxbridge1$string$len + 391172
+4   chromedriver                        0x00000001025c4328 cxxbridge1$string$len + 384600
+5   chromedriver                        0x00000001025c253c cxxbridge1$string$len + 376940
+6   chromedriver                        0x00000001025c1b58 cxxbridge1$string$len + 374408
+7   chromedriver                        0x00000001025b7034 cxxbridge1$string$len + 330596
+8   chromedriver                        0x00000001025b6ad0 cxxbridge1$string$len + 329216
+9   chromedriver                        0x00000001025fa7d0 cxxbridge1$string$len + 606976
+10  chromedriver                        0x00000001025b512c cxxbridge1$string$len + 322652
+11  chromedriver                        0x00000001025b5d7c cxxbridge1$string$len + 325804
+12  chromedriver                        0x00000001029384d8 cxxbridge1$str$ptr + 1678560
+13  chromedriver                        0x000000010293ce40 cxxbridge1$str$ptr + 1697352
+14  chromedriver                        0x000000010291d5ec cxxbridge1$str$ptr + 1568244
+15  chromedriver                        0x000000010293d710 cxxbridge1$str$ptr + 1699608
+16  chromedriver                        0x000000010290eb90 cxxbridge1$str$ptr + 1508248
+17  chromedriver                        0x0000000102959828 cxxbridge1$str$ptr + 1814576
+18  chromedriver                        0x0000000102959980 cxxbridge1$str$ptr + 1814920
+19  chromedriver                        0x00000001029683d0 cxxbridge1$str$ptr + 1874904
+20  libsystem_pthread.dylib             0x0000000190e7b2e4 _pthread_start + 136
+21  libsystem_pthread.dylib             0x0000000190e760fc thread_start + 8
+</msg>
+<arg>${PAYPAL_CHECKOUT_XPATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="FAIL" start="2024-10-05T17:49:45.626796" elapsed="1.234103">ElementClickInterceptedException: Message: element click intercepted: Element &lt;a href="https://www.dimehead.de/checkout/" class="wc-block-components-button wp-element-button wc-block-cart__submit-button contained" style="pointer-events: none;" aria-disabled="true" tabindex="-1"&gt;...&lt;/a&gt; is not clickable at point (963, 810). Other element would receive the click: &lt;div class="wc-block-cart__submit-container"&gt;...&lt;/div&gt;
+  (Session info: chrome=129.0.6668.90)
+Stacktrace:
+0   chromedriver                        0x0000000102970248 cxxbridge1$str$ptr + 1907280
+1   chromedriver                        0x0000000102968730 cxxbridge1$str$ptr + 1875768
+2   chromedriver                        0x000000010257c260 cxxbridge1$string$len + 89488
+3   chromedriver                        0x00000001025c5cd4 cxxbridge1$string$len + 391172
+4   chromedriver                        0x00000001025c4328 cxxbridge1$string$len + 384600
+5   chromedriver                        0x00000001025c253c cxxbridge1$string$len + 376940
+    [ Message content over the limit has been removed. ]
+...er                        0x00000001025b5d7c cxxbridge1$string$len + 325804
+12  chromedriver                        0x00000001029384d8 cxxbridge1$str$ptr + 1678560
+13  chromedriver                        0x000000010293ce40 cxxbridge1$str$ptr + 1697352
+14  chromedriver                        0x000000010291d5ec cxxbridge1$str$ptr + 1568244
+15  chromedriver                        0x000000010293d710 cxxbridge1$str$ptr + 1699608
+16  chromedriver                        0x000000010290eb90 cxxbridge1$str$ptr + 1508248
+17  chromedriver                        0x0000000102959828 cxxbridge1$str$ptr + 1814576
+18  chromedriver                        0x0000000102959980 cxxbridge1$str$ptr + 1814920
+19  chromedriver                        0x00000001029683d0 cxxbridge1$str$ptr + 1874904
+20  libsystem_pthread.dylib             0x0000000190e7b2e4 _pthread_start + 136
+21  libsystem_pthread.dylib             0x0000000190e760fc thread_start + 8</status>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>10</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2024-10-05T17:49:46.861110" elapsed="0.000023"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" start="2024-10-05T17:49:46.861203" elapsed="0.000013"/>
+</kw>
+<status status="FAIL" start="2024-10-05T17:49:34.263542" elapsed="12.597780">ElementClickInterceptedException: Message: element click intercepted: Element &lt;a href="https://www.dimehead.de/checkout/" class="wc-block-components-button wp-element-button wc-block-cart__submit-button contained" style="pointer-events: none;" aria-disabled="true" tabindex="-1"&gt;...&lt;/a&gt; is not clickable at point (963, 810). Other element would receive the click: &lt;div class="wc-block-cart__submit-container"&gt;...&lt;/div&gt;
+  (Session info: chrome=129.0.6668.90)
+Stacktrace:
+0   chromedriver                        0x0000000102970248 cxxbridge1$str$ptr + 1907280
+1   chromedriver                        0x0000000102968730 cxxbridge1$str$ptr + 1875768
+2   chromedriver                        0x000000010257c260 cxxbridge1$string$len + 89488
+3   chromedriver                        0x00000001025c5cd4 cxxbridge1$string$len + 391172
+4   chromedriver                        0x00000001025c4328 cxxbridge1$string$len + 384600
+5   chromedriver                        0x00000001025c253c cxxbridge1$string$len + 376940
+    [ Message content over the limit has been removed. ]
+...er                        0x00000001025b5d7c cxxbridge1$string$len + 325804
+12  chromedriver                        0x00000001029384d8 cxxbridge1$str$ptr + 1678560
+13  chromedriver                        0x000000010293ce40 cxxbridge1$str$ptr + 1697352
+14  chromedriver                        0x000000010291d5ec cxxbridge1$str$ptr + 1568244
+15  chromedriver                        0x000000010293d710 cxxbridge1$str$ptr + 1699608
+16  chromedriver                        0x000000010290eb90 cxxbridge1$str$ptr + 1508248
+17  chromedriver                        0x0000000102959828 cxxbridge1$str$ptr + 1814576
+18  chromedriver                        0x0000000102959980 cxxbridge1$str$ptr + 1814920
+19  chromedriver                        0x00000001029683d0 cxxbridge1$str$ptr + 1874904
+20  libsystem_pthread.dylib             0x0000000190e7b2e4 _pthread_start + 136
+21  libsystem_pthread.dylib             0x0000000190e760fc thread_start + 8</status>
+</test>
+<status status="FAIL" start="2024-10-05T17:49:34.202558" elapsed="12.659396"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Demo Test">Demo Test</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-10-05T17:49:34.263265" level="ERROR">Error in file '/Users/helgeadamo/PycharmProjects/pythonProject1/chrome_driver_resource.robot' on line 3: Importing library 'WebDriverManager' failed: ModuleNotFoundError: No module named 'WebDriverManager'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  /Users/helgeadamo/PycharmProjects/pythonProject1/.venv/bin
+  /Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python39.zip
+  /Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9
+  /Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/lib-dynload
+  /Users/helgeadamo/PycharmProjects/pythonProject1/.venv/lib/python3.9/site-packages</msg>
+</errors>
+</robot>
